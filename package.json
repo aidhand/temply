@@ -1,0 +1,25 @@
+{
+  "name": "temply",
+  "private": true,
+  "scripts": {
+    "prepare": "turbo prepare",
+    "lint": "turbo lint && biome lint",
+    "typecheck": "turbo typecheck",
+    "format": "biome format --write",
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "start": "turbo start",
+    "preview": "turbo build && turbo start"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@biomejs/biome": "^1.8.3",
+    "turbo": "^2.1.0",
+    "typescript": "^5.5.4"
+  },
+  "workspaces": ["apps/*", "packages/*"],
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "bun@1.1.21"
+}

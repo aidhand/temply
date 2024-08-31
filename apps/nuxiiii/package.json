@@ -1,0 +1,26 @@
+{
+  "name": "@repo/nuxiiii",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "lint": "echo 'No linting configured'",
+    "prepare": "nuxt prepare",
+    "format": "prettier --write .",
+    "dev": "nuxt dev --port 3000",
+    "build": "nuxt build",
+    "start": "bun run -b .output/server/index.mjs",
+    "preview": "bun run build && bun run start"
+  },
+  "dependencies": {
+    "@repo/db": "*",
+    "nuxt": "^3.13.0",
+    "vue": "^3.4.38",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.8.3"
+  },
+  "peerDependencies": {
+    "typescript": "^5.5.4"
+  }
+}
