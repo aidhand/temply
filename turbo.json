@@ -1,6 +1,9 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "ui": "tui",
+  "ui": "stream",
+
+  "globalEnv": ["LIBSQL_URL", "LIBSQL_TOKEN"],
+
   "tasks": {
     "prepare": {
       "dependsOn": ["^prepare"],
@@ -19,7 +22,8 @@
     "dev": {
       "dependsOn": ["prepare"],
       "persistent": true,
-      "cache": false
+      "cache": false,
+      "env": ["LIBSQL_URL", "LIBSQL_TOKEN"]
     },
 
     "build": {
