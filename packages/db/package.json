@@ -1,8 +1,8 @@
 {
   "name": "@repo/db",
   "version": "0.0.1",
-  "main": "src/index.js",
-  "module": "src/index.ts",
+  "main": "./src/index.ts",
+  "module": "./src/index.ts",
   "scripts": {
     "dev": "echo 'Add dev script here'",
     "build": "echo 'Add build script here'",
