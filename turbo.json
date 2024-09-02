@@ -6,11 +6,11 @@
       "dependsOn": ["^prepare"],
       "outputs": [".nitro/**", ".nuxt/**"]
     },
-    "lint": {
-      "dependsOn": ["^prepare", "^lint"]
-    },
     "typecheck": {
       "dependsOn": ["^prepare", "^typecheck"]
+    },
+    "lint": {
+      "dependsOn": ["^prepare", "^lint"]
     },
     "format": {
       "dependsOn": ["^format"]

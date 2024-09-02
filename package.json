@@ -3,9 +3,9 @@
   "private": true,
   "scripts": {
     "prepare": "turbo prepare",
-    "lint": "turbo lint && biome lint",
     "typecheck": "turbo typecheck",
-    "format": "biome format --write",
+    "lint": "turbo lint && biome lint --write",
+    "format": "biome format --write && turbo format",
     "dev": "turbo dev",
     "build": "turbo build",
     "start": "turbo start",

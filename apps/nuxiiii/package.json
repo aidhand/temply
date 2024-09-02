@@ -3,9 +3,10 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "lint": "echo 'No linting configured'",
     "prepare": "nuxt prepare",
-    "format": "prettier --write .",
+    "typecheck": "tsc --noEmit",
+    "lint": "biome lint --write",
+    "format": "biome format --write",
     "dev": "nuxt dev --port 3000",
     "build": "nuxt build",
     "start": "bun run -b .output/server/index.mjs",
