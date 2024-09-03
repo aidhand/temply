@@ -8,6 +8,5 @@ export default defineNuxtConfig({
   // https://nitro.unjs.io/config
   nitro: {
     preset: "bun",
-    compressPublicAssets: true,
   },
 });

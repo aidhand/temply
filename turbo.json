@@ -2,39 +2,39 @@
   "$schema": "https://turbo.build/schema.json",
   "ui": "stream",
 
-  "globalEnv": ["LIBSQL_URL", "LIBSQL_TOKEN"],
-
   "tasks": {
-    "prepare": {
-      "dependsOn": ["^prepare"],
+    "typegen": {
+      "dependsOn": ["^typegen"],
       "outputs": [".nitro/**", ".nuxt/**"]
     },
     "typecheck": {
-      "dependsOn": ["^prepare", "^typecheck"]
+      "dependsOn": ["^typegen", "^typecheck"]
     },
     "lint": {
-      "dependsOn": ["^prepare", "^lint"]
+      "dependsOn": ["^typegen", "^lint"]
     },
     "format": {
       "dependsOn": ["^format"]
     },
 
     "dev": {
-      "dependsOn": ["prepare"],
+      "dependsOn": ["typegen"],
       "persistent": true,
       "cache": false,
-      "env": ["LIBSQL_URL", "LIBSQL_TOKEN"]
+      "env": ["LIBSQL_*"]
     },
 
     "build": {
-      "dependsOn": ["prepare", "^build"],
+      "dependsOn": ["^build"],
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
-      "outputs": [".output/**"]
+      "outputs": [".output/**", ".nuxt/dist/**"],
+      "env": ["LIBSQL_*"]
     },
 
     "start": {
       "persistent": true,
-      "cache": false
+      "cache": false,
+      "env": ["LIBSQL_*"]
     }
   }
 }

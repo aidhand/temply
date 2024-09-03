@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "prepare": "nuxt prepare",
+    "typegen": "nuxt prepare",
     "typecheck": "tsc --noEmit",
     "lint": "biome lint --write",
     "format": "biome format --write",
